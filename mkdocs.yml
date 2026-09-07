@@ -1,0 +1,114 @@
+site_name: 留白
+site_description: 一个安静生长的个人博客与知识库
+site_author: 博客作者
+
+site_url: https://abnerqi.github.io/MyBlog/
+repo_url: https://github.com/AbnerQi/MyBlog
+repo_name: AbnerQi/MyBlog
+
+theme:
+  name: material
+  language: zh
+  font: false
+  icon:
+    logo: material/brush-variant
+    repo: fontawesome/brands/github
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.indexes
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: 跟随系统
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: 切换到浅色模式
+
+nav:
+  - 首页: index.md
+  - 文章:
+      - articles/index.md
+  - 知识库:
+      - knowledge/index.md
+      - 技术:
+          - knowledge/technology/index.md
+          - 静态网站的内容组织: knowledge/technology/static-site-structure.md
+      - 阅读: knowledge/reading/index.md
+      - 项目: knowledge/projects/index.md
+  - 标签: tags.md
+  - 关于: about.md
+
+plugins:
+  - search:
+      lang:
+        - zh
+        - en
+  - blog:
+      blog_dir: articles
+      archive: true
+      archive_name: 归档
+      categories: true
+      categories_name: 分类
+      pagination: true
+      pagination_per_page: 8
+      post_url_format: "{date}/{slug}"
+  - tags
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      title: 本页目录
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  generator: false
+  social: []
+
+copyright: 内容除特别说明外，采用 CC BY-NC-SA 4.0 协议
