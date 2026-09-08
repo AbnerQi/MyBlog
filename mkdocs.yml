@@ -1,4 +1,4 @@
-site_name: 留白
+site_name: Abner 的博客
 site_description: 一个安静生长的个人博客与知识库
 site_author: 博客作者
 
@@ -11,7 +11,7 @@ theme:
   language: zh
   font: false
   icon:
-    logo: material/brush-variant
+    logo: material/feather
     repo: fontawesome/brands/github
   features:
     - navigation.tabs

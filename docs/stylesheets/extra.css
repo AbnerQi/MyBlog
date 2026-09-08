@@ -57,6 +57,21 @@ body,
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+/* 页眉标记：以小尺寸朱红羽毛作为安静的落款，而非主视觉。 */
+.md-header__button.md-logo {
+  color: var(--liubai-cinnabar);
+}
+
+.md-header__button.md-logo :is(img, svg) {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+
+.md-header__title {
+  margin-left: 0.1rem;
+  letter-spacing: 0.025em;
+}
+
 .md-tabs {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -331,4 +346,3 @@ body,
     transition-duration: 0.01ms !important;
   }
 }
-
