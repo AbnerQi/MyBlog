@@ -1,4 +1,5 @@
 ---
+title: 知识库
 hide:
   - toc
 ---
